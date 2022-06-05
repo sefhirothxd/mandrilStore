@@ -17,8 +17,14 @@
   gap: 10px;
 }
 
+.containerIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .item h3 {
-  font-size: 32px;
+  font-size: 25px;
   margin: 5px 0;
 }
 

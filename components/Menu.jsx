@@ -1,8 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import style from '../styles/Menu.module.css';
+import { useAppContext } from '../components/StateWarapper';
 import Image from 'next/image';
 const Menu = () => {
+	const cart = useAppContext();
+	const handleOpenCart = () => {
+		cart.openCart();
+	};
+
 	return (
 		<div className={style.containerMenu}>
 			<nav className={style.menu}>
@@ -26,8 +32,8 @@ const Menu = () => {
 					{/* <Link href="/faq">
 						<a className={style.link}>Preguntas</a>
 					</Link> */}
-					<a className={style.link} href="#">
-						Carrito(0)
+					<a className={style.link} onClick={handleOpenCart}>
+						Carrito({cart.getNumberItems()})
 					</a>
 				</div>
 			</nav>

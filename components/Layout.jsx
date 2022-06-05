@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Menu from '../components/Menu';
 import style from '../styles/Layout.module.css';
+import Cart from '../components/Cart';
 const Layout = ({ children, title }) => {
 	return (
 		<div>
@@ -12,6 +13,7 @@ const Layout = ({ children, title }) => {
 			</Head>
 			<Menu />
 			<div className={style.container}>{children}</div>
+			<Cart />
 		</div>
 	);
 };
