@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Menu from '../components/Menu';
-import style from '../styles/layout.module.css';
+import style from '../styles/Layout.module.css';
 const Layout = ({ children, title }) => {
 	return (
 		<div>

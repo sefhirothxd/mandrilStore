@@ -1,15 +1,30 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Product from '../../components/Product';
-const ProductPage = () => {
+import { getPathsFromIds, getItemData } from '../../lib/utils';
+const ProductPage = ({ productInfo }) => {
 	return (
 		<Layout>
-			<Product />
+			<Product item={productInfo} showAs="Page" />
 		</Layout>
 	);
 };
-export async function getstaticPaths() {
-  return {}
-
+export async function getStaticPaths() {
+	const paths = await getPathsFromIds();
+	return {
+		paths,
+		fallback: false,
+	};
 }
+
+export async function getStaticProps({ params }) {
+	const id = params.id;
+	const product = await getItemData(id);
+	return {
+		props: {
+			productInfo: product,
+		},
+	};
+}
+
 export default ProductPage;

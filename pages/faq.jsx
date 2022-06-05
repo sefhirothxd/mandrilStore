@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 const Faq = () => {
 	return (
 		<Layout>
-			<h1>FAQ</h1>
+			<h1>Preguntas frecuentes</h1>
 		</Layout>
 	);
 };

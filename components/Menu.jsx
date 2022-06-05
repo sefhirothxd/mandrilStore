@@ -1,24 +1,33 @@
 import React from 'react';
 import Link from 'next/link';
-import style from '../styles/menu.module.css';
+import style from '../styles/Menu.module.css';
+import Image from 'next/image';
 const Menu = () => {
 	return (
 		<div className={style.containerMenu}>
 			<nav className={style.menu}>
+				<Link href="/">
+					<a>
+						<Image
+							width={100}
+							height={80}
+							src="https://res.cloudinary.com/skillien/image/upload/v1654372282/logosinfondo_n29skv.png"
+							alt="logo empresa"
+						/>
+					</a>
+				</Link>
 				<div>
 					<Link href="/">
-						<a className={style.link}>Home</a>
+						<a className={style.link}>Inicio</a>
 					</Link>
 					<Link href="/store">
-						<a className={style.link}>Store</a>
+						<a className={style.link}>Productos</a>
 					</Link>
-					<Link href="/faq">
-						<a className={style.link}>FQA</a>
-					</Link>
-				</div>
-				<div>
+					{/* <Link href="/faq">
+						<a className={style.link}>Preguntas</a>
+					</Link> */}
 					<a className={style.link} href="#">
-						Cart(0)
+						Carrito(0)
 					</a>
 				</div>
 			</nav>
