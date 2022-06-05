@@ -1,7 +1,9 @@
+import { productos } from '../data';
+
 export async function getItems() {
-	const req = await fetch('http://localhost:3000/api/items');
-	const items = await req.json();
-	return items;
+	// const req = await fetch('http://localhost:3000/api/items');
+	// const items = await req.json();
+	return productos;
 }
 
 export async function getLatestItems() {
