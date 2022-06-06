@@ -1,17 +1,17 @@
 import React from 'react';
 import { useAppContext } from '../components/StateWarapper';
 import style from '../styles/CartButton.module.css';
-const CartButton = ({ item }) => {
+
+const CartDelete = ({ item }) => {
 	const cart = useAppContext();
 	const handleClick = () => {
-		cart.addItemCart(item);
-		cart.openCart();
+		cart.deleteItemCart(item);
 	};
 	return (
-		<button className={style.button} onClick={handleClick}>
-			Agregar Carrito
+		<button className={style.buttonDelete} onClick={handleClick}>
+			Quitar
 		</button>
 	);
 };
 
-export default CartButton;
+export default CartDelete;

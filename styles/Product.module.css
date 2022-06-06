@@ -61,6 +61,26 @@
   margin-right: 30px;
 }
 
+.listItem {
+  display: flex;
+  gap: 10px;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 0;
+  color: white;
+  align-items: center;
+  height: 100%;
+}
+
+.listItem h3 {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* .listItemImage {} */
+
 @keyframes scale {
   from {
     transform: scale(0);

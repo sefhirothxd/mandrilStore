@@ -5,6 +5,7 @@ const AppContext = createContext({
 	openCart: () => {},
 	closeCart: () => {},
 	addItemCart: (item) => {},
+	deleteItemCart: (item) => {},
 	getNumberItems: () => {},
 });
 
@@ -30,6 +31,17 @@ const StateWarapper = ({ children }) => {
 		}
 		setItems([...temp]);
 	};
+	const handleDeleteItemCart = (item) => {
+		const temp = [...items];
+		const found = temp.find((product) => product.id === item.id);
+		if (found) {
+			found.qty -= 1;
+			if (found.qty === 0) {
+				temp.splice(temp.indexOf(found), 1);
+			}
+		}
+		setItems([...temp]);
+	};
 
 	const handleNumberItems = () => {
 		return items.reduce((total, item) => total + item.qty, 0);
@@ -43,6 +55,7 @@ const StateWarapper = ({ children }) => {
 				openCart: handleOpenCart,
 				closeCart: handleCloseCart,
 				addItemCart: handleAddItemCart,
+				deleteItemCart: handleDeleteItemCart,
 				getNumberItems: handleNumberItems,
 			}}
 		>

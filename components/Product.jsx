@@ -4,6 +4,7 @@ import Image from 'next/image';
 import style from '../styles/Product.module.css';
 import { convertToPath } from '../lib/utils';
 import CartButton from '../components/CartButton';
+import CartDeleteButton from '../components/CartDelete';
 import Icon from '../public/img/x.svg';
 const Product = ({ item, showAs, qty }) => {
 	if (showAs === 'Page') {
@@ -39,7 +40,35 @@ const Product = ({ item, showAs, qty }) => {
 		);
 	}
 	if (showAs === 'ListItem') {
-		return <div>List Item</div>;
+		return (
+			<div className={style.listItem}>
+				<div
+					style={{
+						width: '100%',
+						maxWidth: '100px',
+						position: 'relative',
+					}}
+				>
+					<Image
+						src={item.image}
+						alt={item.description}
+						width={100}
+						height={100}
+						className={style.listItemImage}
+						objectFit="cover"
+					/>
+				</div>
+				<div>
+					<div>
+						<h3>{item.title}</h3>
+					</div>
+					<div>Precio: S/.{item.price}</div>
+					{qty === 0 ? '' : <div>{qty} Unidades</div>}
+					{qty === 0 ? '' : <div>SubTotal: S/.{qty * item.price}</div>}
+					<CartDeleteButton item={item} />
+				</div>
+			</div>
+		);
 	}
 	return (
 		<div className={style.item}>

@@ -29,9 +29,9 @@ const Menu = () => {
 					<Link href="/store">
 						<a className={style.link}>Productos</a>
 					</Link>
-					{/* <Link href="/faq">
-						<a className={style.link}>Preguntas</a>
-					</Link> */}
+					<Link href="/login">
+						<a className={style.link}>Login</a>
+					</Link>
 					<a className={style.link} onClick={handleOpenCart}>
 						Carrito({cart.getNumberItems()})
 					</a>

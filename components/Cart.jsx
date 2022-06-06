@@ -9,6 +9,14 @@ const Cart = () => {
 		cart.closeCart();
 	};
 
+	const getTotal = () => {
+		const total = cart.items.reduce(
+			(acc, item) => (acc += item.qty * item.price),
+			0
+		);
+		return total;
+	};
+
 	return (
 		<div
 			className={style.cart}
@@ -32,6 +40,7 @@ const Cart = () => {
 							/>
 						))}
 					</div>
+					<div className={style.total}>Total : S/.{getTotal()}</div>
 				</>
 			)}
 		</div>
