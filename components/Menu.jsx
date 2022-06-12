@@ -33,7 +33,10 @@ const Menu = () => {
 						<a className={style.link}>Login</a>
 					</Link>
 					<a className={style.link} onClick={handleOpenCart}>
-						Carrito({cart.getNumberItems()})
+						Carrito
+						{cart.getNumberItems() > 0 && (
+							<span className={style.numProduct}>{cart.getNumberItems()}</span>
+						)}
 					</a>
 				</div>
 			</nav>

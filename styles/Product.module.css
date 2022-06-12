@@ -1,20 +1,24 @@
 .items {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   color: white;
 }
 
 .item {
   background: #2C2C2E;
-  padding: 20px;
+  padding-bottom: 20px;
   font-size: 20px;
-  width: 400px;
+  width: 320px;
+  max-height: 474px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 10px;
+  text-align: start;
+}
+
+.containerText {
+  padding: 0 10px;
 }
 
 .containerIcon {
@@ -24,16 +28,21 @@
 }
 
 .item h3 {
-  font-size: 25px;
+  font-size: 22px;
   margin: 5px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
-.listItem {
+.containerbtn {
   display: flex;
-  gap: 10px;
-  border-bottom: solid 1px #ccc;
-  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
+
 
 .page {
   background-color: #2C2C2E;
@@ -68,7 +77,6 @@
   padding: 10px 0;
   color: white;
   align-items: center;
-  height: 100%;
 }
 
 .listItem h3 {

@@ -2,7 +2,12 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ['localhost', 'res.cloudinary.com', 'boletostore.com'],
+		domains: [
+			'localhost',
+			'res.cloudinary.com',
+			'boletostore.com',
+			'rockfordpe.vtexassets.com',
+		],
 	},
 };
 

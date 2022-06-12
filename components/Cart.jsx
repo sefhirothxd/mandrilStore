@@ -30,7 +30,7 @@ const Cart = () => {
 			) : (
 				<>
 					<h3>Tus Productos</h3>
-					<div>
+					<div className={style.containerItems}>
 						{cart.items.map((item) => (
 							<Product
 								key={item.id}

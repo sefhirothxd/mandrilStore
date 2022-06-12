@@ -32,7 +32,7 @@ const Product = ({ item, showAs, qty }) => {
 					</div>
 					<div className={style.price}>S/. {item.price}</div>
 					<div>{item.description}</div>
-					<div>
+					<div className={style.containerbtn}>
 						<CartButton item={item} />
 					</div>
 				</div>
@@ -84,16 +84,18 @@ const Product = ({ item, showAs, qty }) => {
 					</a>
 				</Link>
 			</div>
-			<div>
-				<h3>
-					<Link href={`/store/url-a-mi-componente`}>
-						<a>{item.title}</a>
-					</Link>
-				</h3>
-			</div>
-			<div>S/.{item.price}</div>
-			<div>
-				<CartButton item={item} />
+			<div className={style.containerText}>
+				<div>
+					<h3>
+						<Link href={`/store/${convertToPath(item.title)}`}>
+							<a>{item.title}</a>
+						</Link>
+					</h3>
+				</div>
+				<div>S/.{item.price}</div>
+				<div className={style.containerbtn}>
+					<CartButton item={item} />
+				</div>
 			</div>
 		</div>
 	);
