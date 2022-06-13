@@ -6,6 +6,7 @@ export const productos = [
 		image: '/img/bolso-cultura-chicha.jpg',
 		description:
 			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia maiores praesentium vitae sequi consectetur itaque ea inventore architecto nemo. Enim id perspiciatis minus modi qui at commodi quos quisquam similique!',
+		offer: false,
 	},
 	{
 		id: 1,
@@ -14,6 +15,7 @@ export const productos = [
 		image: '/img/mandil-cultura-chicha.jpg',
 		description:
 			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia maiores praesentium vitae sequi consectetur itaque ea inventore architecto nemo. Enim id perspiciatis minus modi qui at commodi quos quisquam similique!',
+		offer: false,
 	},
 	{
 		id: 2,
@@ -22,6 +24,7 @@ export const productos = [
 		image: '/img/mousepad-cultura-chicha.jpg',
 		description:
 			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia maiores praesentium vitae sequi consectetur itaque ea inventore architecto nemo. Enim id perspiciatis minus modi qui at commodi quos quisquam similique!',
+		offer: false,
 	},
 	{
 		id: 3,
@@ -30,6 +33,7 @@ export const productos = [
 		image: '/img/polo-dama-cultura-chicha.jpg',
 		description:
 			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia maiores praesentium vitae sequi consectetur itaque ea inventore architecto nemo. Enim id perspiciatis minus modi qui at commodi quos quisquam similique!',
+		offer: false,
 	},
 	{
 		id: 4,
@@ -38,6 +42,7 @@ export const productos = [
 		image: '/img/cojin-deco-cultura-chicha.jpg',
 		description:
 			'Give your desk nothing but the best and upgrade your coaster game with these all new environmentally-friendly bamboo Invertocat 2.0 Coasters. Includes four laser-etched coasters with coaster stand.',
+		offer: false,
 	},
 	{
 		id: 5,
@@ -46,6 +51,7 @@ export const productos = [
 		image: '/img/polo-nino-cultura-chicha.jpg',
 		description:
 			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia maiores praesentium vitae sequi consectetur itaque ea inventore architecto nemo. Enim id perspiciatis minus modi qui at commodi quos quisquam similique!',
+		offer: false,
 	},
 	{
 		id: 6,
@@ -54,6 +60,7 @@ export const productos = [
 		image: '/img/polo-varon-cultura-chicha.jpg',
 		description:
 			'We’re going on an adventure! Let your imagination wander with the new Adventure  Sticker Pack. With several never before printed Octocats and some old friends, this pack is here to celebrate the journey as much as the end.',
+		offer: false,
 	},
 	{
 		id: 7,
@@ -62,6 +69,7 @@ export const productos = [
 		image: '/img/polera-capucha-cultura-chicha.jpg',
 		description:
 			'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
+		offer: false,
 	},
 	{
 		id: 8,
@@ -70,5 +78,42 @@ export const productos = [
 		image: '/img/bolso-deportivo-cultura-chicha.jpg',
 		description:
 			'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
+		offer: false,
+	},
+	{
+		id: 9,
+		title: '2 Polos negro parejas Bugs Y Lola Bunny',
+		price: 40,
+		image: '/img/2PolosnegroparejasBugsYLolaBunny.jpg',
+		description:
+			'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
+		offer: true,
+	},
+	{
+		id: 10,
+		title: '2 Polos blanco parejas Pepe Le Pew & Penelope',
+		price: 40,
+		image: '/img/2PolosblancoparejasPepeLePew&Penelope.jpg',
+		description:
+			'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
+		offer: true,
+	},
+	{
+		id: 11,
+		title: '2 Polos blanco parejas Pandas',
+		price: 40,
+		image: '/img/2PolosblancoparejasPandas.jpg',
+		description:
+			'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
+		offer: true,
+	},
+	{
+		id: 12,
+		title: '2 Polos negro parejas Goku & Milk',
+		price: 40,
+		image: '/img/2PolosnegroparejasGoku&Milk.jpg',
+		description:
+			'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
+		offer: true,
 	},
 ];

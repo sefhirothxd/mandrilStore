@@ -30,10 +30,22 @@ const Menu = () => {
 						<a className={style.link}>Productos</a>
 					</Link>
 					<Link href="/login">
-						<a className={style.link}>Login</a>
+						<a className={style.link}>
+							<Image
+								src="/img/CarbonUserAvatar.svg"
+								width={30}
+								height={30}
+								alt="icono carrito de compra"
+							/>
+						</a>
 					</Link>
 					<a className={style.link} onClick={handleOpenCart}>
-						Carrito
+						<Image
+							src="/img/MdiCartVariant.svg"
+							width={30}
+							height={30}
+							alt="icono carrito de compra"
+						/>
 						{cart.getNumberItems() > 0 && (
 							<span className={style.numProduct}>{cart.getNumberItems()}</span>
 						)}
