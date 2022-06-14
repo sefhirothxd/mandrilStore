@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import StateWrapper from '../components/StateWarapper';
+
 function MyApp({ Component, pageProps }) {
 	return (
 		<StateWrapper>
