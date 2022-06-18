@@ -6,7 +6,7 @@ import styleItems from '../../styles/Product.module.css';
 const index = ({ items }) => {
 	return (
 		<Layout>
-			<h1>Productos</h1>
+			<h1 className="font-bold text-3xl mb-3">Productos</h1>
 			<div className={styleItems.items}>
 				{items &&
 					items.map((item) => (

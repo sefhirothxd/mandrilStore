@@ -7,12 +7,11 @@ export default function Home({ items, offer }) {
 	return (
 		<Layout title="Bienvenido">
 			<div>
-				<h1>Inicio</h1>
 				<div>
 					<Slider />
 				</div>
 				<div>
-					<h3>Produtos Mas vendidos</h3>
+					<h3 className="font-bold text-3xl mt-5 mb-3">Lo más vendidos</h3>
 					<div className={styleItems.items}>
 						{items &&
 							items.map((item) => (
@@ -21,7 +20,7 @@ export default function Home({ items, offer }) {
 					</div>
 				</div>
 				<div>
-					<h3>Oferta 2x1 !!</h3>
+					<h3 className="font-bold text-3xl mt-5 mb-3">Oferta 2x1 !!</h3>
 					<div className={styleItems.items}>
 						{offer &&
 							offer.map((item) => (
