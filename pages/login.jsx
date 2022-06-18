@@ -2,6 +2,10 @@ import Layout from '../components/Layout';
 import { LockClosedIcon, UserIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 const Login = () => {
+	const Login = (e) => {
+		e.preventDefault();
+		alert('Login en construcción');
+	};
 	return (
 		<Layout>
 			<>
@@ -83,7 +87,7 @@ const Login = () => {
 
 							<div>
 								<button
-									type="submit"
+									onClick={(e) => Login(e)}
 									className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-verde hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 								>
 									<span className="absolute left-0 inset-y-0 flex items-center pl-3">
