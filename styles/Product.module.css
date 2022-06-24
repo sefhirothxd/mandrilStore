@@ -1,16 +1,16 @@
 .items {
-  display: flex;
+  /* display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  color: white;
+  color: white; */
 }
 
-@media screen and (max-width: 1100px) {
+/* @media screen and (max-width: 1100px) {
   .items {
     flex-wrap: wrap;
   }
-}
+} */
 
 
 .item {
@@ -23,7 +23,16 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+
 }
+
+@media screen and (min-width:1280px) and (max-width: 1370px) {
+  .item {
+    width: 300px;
+    height: 474px;
+  }
+}
+
 
 .containerText {
   padding: 0 10px;
