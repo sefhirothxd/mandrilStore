@@ -80,7 +80,7 @@ export default function Example() {
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden lg:flex lg:w-72 space-x-5">
+          <Popover.Group as="nav" className="hidden lg:flex lg:w-64 space-x-5">
             <Link href="/">
               <a className="text-xl font-bold text-white hover:text-orange-500">
                 Inicio
