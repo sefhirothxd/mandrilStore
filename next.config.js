@@ -8,6 +8,7 @@ const nextConfig = {
       'boletostore.com',
       'rockfordpe.vtexassets.com',
       'lh3.googleusercontent.com',
+      'tailwindui.com',
     ],
   },
   experimental: {

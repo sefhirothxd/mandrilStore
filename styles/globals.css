@@ -8,8 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #1C1C1E;
-
+  background-color: #1c1c1e;
 }
 
 ::-webkit-scrollbar {
@@ -42,8 +41,7 @@ h2 {
   width: 100%;
 }
 
-
-.swiper-slide>span {
+.swiper-slide > span {
   max-height: 500px;
   min-height: 300px;
 }

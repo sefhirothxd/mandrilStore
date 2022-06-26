@@ -50,7 +50,7 @@ const Slider = () => {
         //   disableOnInteraction: false,
         // }}
         modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper"
+        className="mySwiper z-0"
       >
         <SwiperSlide>
           <Image

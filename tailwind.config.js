@@ -8,9 +8,13 @@ module.exports = {
     extend: {
       colors: {
         verde: '#69BC63',
+        bgBlack: '#1C1C1E',
       },
       spacing: {
         500: '500px',
+      },
+      maxWidth: {
+        '8xl': '1440px',
       },
     },
   },

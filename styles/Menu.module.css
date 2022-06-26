@@ -1,6 +1,6 @@
 .containerMenu {
   width: 100%;
-  background: #1C1C1E;
+  background: #1c1c1e;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: #fff;
 }
@@ -15,7 +15,7 @@
   padding: 10px 10px 0 10px;
 }
 
-.menu>div {
+.menu > div {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
@@ -29,6 +29,16 @@
   position: relative;
 }
 
+.carrito {
+  display: block;
+  padding: 10px;
+  top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+}
+
 .link:hover {
   background: rgb(38, 111, 180);
   color: white;
@@ -38,6 +48,21 @@
   position: absolute;
   top: 0px;
   right: 0px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movilNumProduct {
+  position: absolute;
+  top: -4px;
+  right: calc(100vw - 60px);
   background-color: red;
   color: white;
   font-size: 15px;
