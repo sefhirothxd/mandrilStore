@@ -1,4 +1,4 @@
-import { async } from '@firebase/util';
+import { createContext, useState, useContext, useEffect } from 'react';
 import {
   GoogleAuthProvider,
   signInWithPopup,
@@ -9,7 +9,6 @@ import {
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 
-import React, { createContext, useState, useContext } from 'react';
 import { auth } from '../firebase';
 const AppContext = createContext({
   isLogin: true,
@@ -23,6 +22,7 @@ const AppContext = createContext({
   loginEmail: (email, password) => {},
   register: (email, password) => {},
   google: () => {},
+  googleLogout: () => {},
   userinfo: {},
 });
 
@@ -31,6 +31,21 @@ const StateWarapper = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [items, setItems] = useState([]);
   const [userinfo, setUserinfo] = useState({});
+
+  useEffect(() => {
+    const unsuscribe = onAuthStateChanged(auth, (user) => {
+      console.log(user);
+      if (user) {
+        const { email, photoURL, displayName, uid } = user;
+        setIsLogin(true);
+        setUserinfo({ email, photoURL, displayName, uid });
+      } else {
+        setIsLogin(false);
+        setUserinfo({});
+      }
+    });
+    return () => unsuscribe();
+  }, []);
 
   const registerUser = (email, password) =>
     createUserWithEmailAndPassword(auth, email, password);
@@ -45,6 +60,8 @@ const StateWarapper = ({ children }) => {
     setUserinfo(res.user);
     setIsLogin(true);
   };
+
+  const closeGoogle = async () => signOut(auth);
   const handleOpenCart = () => {
     setIsOpen(true);
   };
@@ -94,6 +111,7 @@ const StateWarapper = ({ children }) => {
         register: registerUser,
         loginEmail: loginUser,
         google: loginGoogle,
+        googleLogout: closeGoogle,
       }}
     >
       {children}

@@ -11,7 +11,12 @@ export default function Home({ items, offer }) {
           <Slider />
         </div>
         <div>
-          <h3 className="font-bold text-3xl mt-5 mb-3">Lo más vendidos</h3>
+          <h3 className="font-bold text-3xl mt-5 mb-3 text-center">
+            ¡Lo más vendido esta semana! 👍
+          </h3>
+          <p className="font-normal text-2xl mt-3 mb-5 text-center">
+            Son los productos destacados en nuestra tienda online{' '}
+          </p>
           <div
             className={`grid overflow-hidden grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center xl:grid-cols-4 grid-rows-1 gap-5 grid-flow-row`}
           >
@@ -22,7 +27,12 @@ export default function Home({ items, offer }) {
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-3xl mt-5 mb-3">Oferta 2x1 !!</h3>
+          <h3 className="font-bold text-3xl mt-5 mb-3 text-center">
+            Las mejores ofertas de la semana 🎉
+          </h3>
+          <p className="font-normal text-2xl mt-3 mb-5 text-center">
+            Encuentra todos nuestros descuentazos en la categoría Pareja! 💯
+          </p>
           <div
             className={`grid overflow-hidden grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center xl:grid-cols-4 grid-rows-1 gap-5 grid-flow-row`}
           >

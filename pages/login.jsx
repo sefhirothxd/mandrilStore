@@ -4,12 +4,17 @@ import { LockClosedIcon, UserIcon } from '@heroicons/react/solid';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const context = useAppContext();
   const router = useRouter();
+
+  if (context.isLogin) {
+    router.push('/');
+  }
 
   const handleGoogleSignIn = async () => {
     try {
@@ -37,7 +42,9 @@ const Login = () => {
   return (
     <Layout>
       <>
-        <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div
+          className={`min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8`}
+        >
           <div className="max-w-md w-full space-y-8">
             <div className="flex justify-center flex-col">
               <div className="flex justify-center">
@@ -147,6 +154,11 @@ const Login = () => {
                   </span>
                   Logearse
                 </button>
+                <Link href="/register">
+                  <a className="flex justify-center mt-3 hover:underline">
+                    ¿No tienes cuenta?
+                  </a>
+                </Link>
               </div>
             </form>
           </div>

@@ -78,8 +78,8 @@ const Product = ({ item, showAs, qty }) => {
             <Image
               src={item.image}
               alt={item.description}
-              width={500}
-              height={500}
+              width={300}
+              height={300}
             />
           </a>
         </Link>

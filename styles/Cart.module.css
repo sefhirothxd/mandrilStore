@@ -14,10 +14,19 @@
   color: white;
   z-index: 10;
 }
+.cartCheckout {
+  height: 100%;
+  max-height: 500px;
+  overflow-y: scroll;
+}
 
 .total {
   font-weight: bolder;
   font-size: 40px;
+}
+.totalCheckout {
+  font-weight: bolder;
+  font-size: 30px;
 }
 
 .empty {
@@ -32,7 +41,17 @@
 
 .close {
   background-color: #ffd500;
-  color: Oblack;
+  color: black;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.procesar {
+  background-color: chartreuse;
+  color: black;
   font-weight: bold;
   border: none;
   font-size: 16px;
@@ -47,5 +66,14 @@
   justify-content: flex-start;
   align-content: flex-start;
   overflow-y: auto;
-  max-height: calc(100% - 300px);
+  max-height: calc(100% - 100px);
+}
+.containerItemsCheckout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  overflow-y: auto;
+  max-height: 500px;
+  min-height: 500px;
 }
