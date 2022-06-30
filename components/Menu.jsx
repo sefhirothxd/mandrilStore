@@ -39,7 +39,7 @@ const loginListUrl = [
   {
     name: 'Perfil',
     description: 'Pagina de inicio donde encontraras ofertas.',
-    href: '/',
+    href: '/perfil',
     icon: ChartBarIcon,
   },
 ];

@@ -13,9 +13,13 @@ import { auth } from '../firebase';
 const AppContext = createContext({
   isLogin: true,
   isOpen: true,
+  pay: true,
   items: [],
+  orders: [],
+  clearCart: () => {},
   openCart: () => {},
   closeCart: () => {},
+  addOrders: (item) => {},
   addItemCart: (item) => {},
   deleteItemCart: (item) => {},
   getNumberItems: () => {},
@@ -24,13 +28,17 @@ const AppContext = createContext({
   google: () => {},
   googleLogout: () => {},
   userinfo: {},
+  openPay: () => {},
+  closePay: () => {},
 });
 
 const StateWarapper = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [items, setItems] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [userinfo, setUserinfo] = useState({});
+  const [pay, setPay] = useState(false);
 
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (user) => {
@@ -68,6 +76,12 @@ const StateWarapper = ({ children }) => {
   const handleCloseCart = () => {
     setIsOpen(false);
   };
+  const handleOpenPay = () => {
+    setPay(true);
+  };
+  const handleClosePay = () => {
+    setPay(false);
+  };
 
   const handleAddItemCart = (item) => {
     const temp = [...items];
@@ -80,6 +94,11 @@ const StateWarapper = ({ children }) => {
     }
     setItems([...temp]);
   };
+  const handleOrder = (item) => {
+    const temp = [...orders];
+    temp.push(item);
+    setOrders([...temp]);
+  };
   const handleDeleteItemCart = (item) => {
     const temp = [...items];
     const found = temp.find((product) => product.id === item.id);
@@ -91,6 +110,9 @@ const StateWarapper = ({ children }) => {
     }
     setItems([...temp]);
   };
+  const handleClearCart = () => {
+    setItems([]);
+  };
 
   const handleNumberItems = () => {
     return items.reduce((total, item) => total + item.qty, 0);
@@ -101,8 +123,11 @@ const StateWarapper = ({ children }) => {
       value={{
         isOpen,
         items,
+        orders,
         userinfo,
         isLogin,
+        pay,
+        clearCart: handleClearCart,
         openCart: handleOpenCart,
         closeCart: handleCloseCart,
         addItemCart: handleAddItemCart,
@@ -112,6 +137,9 @@ const StateWarapper = ({ children }) => {
         loginEmail: loginUser,
         google: loginGoogle,
         googleLogout: closeGoogle,
+        openPay: handleOpenPay,
+        closePay: handleClosePay,
+        addOrders: handleOrder,
       }}
     >
       {children}

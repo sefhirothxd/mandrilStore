@@ -128,19 +128,7 @@ const Login = () => {
                   </a>
                 </div>
               </div>
-              <div className="m-0">
-                <button
-                  className="w-full flex justify-center"
-                  onClick={handleGoogleSignIn}
-                >
-                  <Image
-                    src={'/img/icons8-google.svg'}
-                    alt="Google"
-                    width={32}
-                    height={32}
-                  />
-                </button>
-              </div>
+
               <div>
                 <button
                   type="submit"
@@ -161,6 +149,19 @@ const Login = () => {
                 </Link>
               </div>
             </form>
+            <div className="m-0">
+              <button
+                className="w-full flex justify-center"
+                onClick={handleGoogleSignIn}
+              >
+                <Image
+                  src={'/img/icons8-google.svg'}
+                  alt="Google"
+                  width={32}
+                  height={32}
+                />
+              </button>
+            </div>
           </div>
         </div>
       </>
