@@ -120,7 +120,7 @@ export const productos = [
     id: 13,
     title: 'Polo azul con imagen de leon',
     price: 40,
-    image: '/img/polo9.png',
+    image: '/img/Polo9.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -129,7 +129,7 @@ export const productos = [
     id: 14,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo10.png',
+    image: '/img/Polo10.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -138,7 +138,7 @@ export const productos = [
     id: 15,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo11.png',
+    image: '/img/Polo11.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -147,7 +147,7 @@ export const productos = [
     id: 16,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo12.png',
+    image: '/img/Polo12.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -156,7 +156,7 @@ export const productos = [
     id: 17,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo13.png',
+    image: '/img/Polo13.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -165,7 +165,7 @@ export const productos = [
     id: 18,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo14.png',
+    image: '/img/Polo14.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -174,7 +174,7 @@ export const productos = [
     id: 19,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo15.png',
+    image: '/img/Polo15.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -183,7 +183,7 @@ export const productos = [
     id: 20,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo17.png',
+    image: '/img/Polo17.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -192,7 +192,7 @@ export const productos = [
     id: 21,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo18.png',
+    image: '/img/Polo18.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -201,7 +201,7 @@ export const productos = [
     id: 22,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo19.png',
+    image: '/img/Polo19.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -210,7 +210,7 @@ export const productos = [
     id: 23,
     title: 'Polo negro con estampado',
     price: 40,
-    image: '/img/polo20.png',
+    image: '/img/Polo20.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -219,7 +219,7 @@ export const productos = [
     id: 24,
     title: 'Polo negro con estampado de leon',
     price: 40,
-    image: '/img/polo21.png',
+    image: '/img/Polo21.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -228,7 +228,7 @@ export const productos = [
     id: 25,
     title: 'Polo negro con estapado se sufre pero se goza',
     price: 40,
-    image: '/img/polo22.png',
+    image: '/img/Polo22.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -237,7 +237,7 @@ export const productos = [
     id: 26,
     title: 'Polo negro con estapado !amor eterno¡',
     price: 40,
-    image: '/img/polo23.png',
+    image: '/img/Polo23.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
@@ -246,7 +246,7 @@ export const productos = [
     id: 27,
     title: 'Polo negro con estapado !que rico mi peru¡',
     price: 40,
-    image: '/img/polo24.png',
+    image: '/img/Polo24.png',
     description:
       'While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).',
     offer: false,
