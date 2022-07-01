@@ -57,12 +57,6 @@
   align-items: center;
   margin-top: 10px;
 }
-.containerbtn2 {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-top: 10px;
-}
 
 .page {
   background-color: #2c2c2e;

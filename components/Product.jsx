@@ -32,7 +32,7 @@ const Product = ({ item, showAs, qty }) => {
           </div>
           <div className={style.price}>S/. {item.price}</div>
           <div>{item.description}</div>
-          <div className={style.containerbtn2}>
+          <div className={style.containerbtn}>
             <CartButton item={item} />
           </div>
         </div>
