@@ -55,7 +55,7 @@ const Slider = () => {
         <SwiperSlide>
           <Image
             layout="responsive"
-            src="/img/osobanner.webp"
+            src="/img/banner3.webp"
             width="100%"
             height="100%"
             alt="probando"
@@ -65,7 +65,7 @@ const Slider = () => {
         <SwiperSlide>
           <Image
             layout="responsive"
-            src="/img/banner3.webp"
+            src="/img/osobanner.webp"
             width="100%"
             height="100%"
             alt="probando"
