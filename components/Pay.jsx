@@ -18,7 +18,7 @@ const Pay = () => {
   };
   return (
     <div className="absolute flex justify-center items-center  top-0 h-screen z-10 w-full bg-black bg-opacity-50">
-      <div className="min-w-screen  bg-gray-50 py-5">
+      <div className={show ? '' : 'min-w-screen  bg-gray-50 py-5'}>
         <div className="w-full bg-white border-t border-b border-gray-200 px-5 py-10 text-gray-800">
           <div className="w-full">
             <div className="-mx-3 md:flex items-start">

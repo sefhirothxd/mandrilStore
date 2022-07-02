@@ -1,29 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Table } from 'flowbite-react';
 import Layout from '../components/Layout';
 import { useAppContext } from '../components/StateWarapper';
+import { useFirestoreState } from '../hooks/useFirestore';
 const Perfil = () => {
   const cart = useAppContext();
-  console.log(cart.orders);
+  const { orders, error, loading, getOrders } = useFirestoreState();
+
+  useEffect(() => {
+    getOrders();
+  }, []);
+  const loadingData = loading.getData && <p>Loading data...</p>;
   return (
     <Layout>
-      {cart.orders.length > 0 ? (
-        cart.orders.map((item, index) => {
+      <div>{loadingData}</div>
+      {orders.length > 0 ? (
+        orders.map((item, index) => {
           return (
             <>
               <h1 className="text-white text-xl md:text-2xl">
-                Resumen de la orden N° {index + 1}
+                Resumen de la orden N° {orders.length - index}
               </h1>
-              {/* <div className="flex justify-start item-center flex-col gap-3 my-2 rounded-lg pb-6 px-2 border-2 border-white">
-                <h2 className="text-white text-xl md:text-2xl">
-                  Datos de entrega
-                </h2>
-                <p>Nombre: {item.cliente.name}</p>
-                <p>Apellido: {item.cliente.lastName}</p>
-                <p>DNI: {item.cliente.dni}</p>
-                <p>Direccion: {item.cliente.address}</p>
-                <p>Distrito: {item.cliente.region}</p>
-              </div> */}
               <div key={index + 2}>
                 <Table hoverable={true} key={index} className="mt-5 bg-black">
                   <Table.Head>
@@ -39,7 +36,9 @@ const Perfil = () => {
                           className="bg-white dark:border-gray-700 dark:bg-gray-800"
                           key={index}
                         >
-                          <Table.Cell key={index}>{item.title}</Table.Cell>
+                          <Table.Cell key={index} width={'50%'}>
+                            {item.title}
+                          </Table.Cell>
                           <Table.Cell key={index}>{item.price}</Table.Cell>
                           <Table.Cell key={index}>{item.qty}</Table.Cell>
                           <Table.Cell key={index}>

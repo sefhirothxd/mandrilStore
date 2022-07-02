@@ -10,6 +10,7 @@ import {
 } from 'firebase/auth';
 
 import { auth } from '../firebase';
+import { useFirestoreState } from '../hooks/useFirestore';
 const AppContext = createContext({
   isLogin: true,
   isOpen: true,
@@ -24,7 +25,7 @@ const AppContext = createContext({
   deleteItemCart: (item) => {},
   getNumberItems: () => {},
   loginEmail: (email, password) => {},
-  register: (email, password) => {},
+  register: (item) => {},
   google: () => {},
   googleLogout: () => {},
   userinfo: {},
@@ -39,6 +40,7 @@ const StateWarapper = ({ children }) => {
   const [orders, setOrders] = useState([]);
   const [userinfo, setUserinfo] = useState({});
   const [pay, setPay] = useState(false);
+  const { addOrdersFire, addInformationsRegister } = useFirestoreState();
 
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (user) => {
@@ -55,8 +57,24 @@ const StateWarapper = ({ children }) => {
     return () => unsuscribe();
   }, []);
 
-  const registerUser = (email, password) =>
-    createUserWithEmailAndPassword(auth, email, password);
+  const registerUser = async ({
+    email,
+    password,
+    documentos,
+    genero,
+    nDocumento,
+    nombre,
+  }) => {
+    const res = await createUserWithEmailAndPassword(auth, email, password);
+    await addInformationsRegister({
+      email,
+      documentos,
+      genero,
+      nDocumento,
+      nombre,
+      uid: res.user.uid,
+    });
+  };
   const loginUser = async (email, password) => {
     const res = await signInWithEmailAndPassword(auth, email, password);
     setUserinfo(res.user);
@@ -94,10 +112,11 @@ const StateWarapper = ({ children }) => {
     }
     setItems([...temp]);
   };
-  const handleOrder = (item) => {
+  const handleOrder = async (item) => {
     const temp = [...orders];
     temp.push(item);
     setOrders([...temp]);
+    await addOrdersFire(item);
   };
   const handleDeleteItemCart = (item) => {
     const temp = [...items];

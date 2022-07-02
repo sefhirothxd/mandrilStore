@@ -5,10 +5,15 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useForm } from 'react-hook-form';
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    getValues,
+    setError,
+  } = useForm();
   const context = useAppContext();
   const router = useRouter();
 
@@ -16,12 +21,10 @@ const Register = () => {
     router.push('/');
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleRegister = async (e) => {
+    console.log(e);
     try {
-      await context.loginEmail(email, password);
-      console.log('Usuario logeado');
-      router.push('/');
+      await context.register(e);
     } catch (error) {
       console.log(error);
       alert(error);
@@ -47,7 +50,7 @@ const Register = () => {
               </h1>
             </div>
             <form
-              onSubmit={handleSubmit}
+              onSubmit={handleSubmit(handleRegister)}
               className="mt-8 space-y-6 "
               action="#"
               method="POST"
@@ -59,15 +62,15 @@ const Register = () => {
                     Correo Electronico
                   </label>
                   <input
-                    id="email-address"
-                    name="email"
                     type="email"
                     autoComplete="email"
                     required
                     className="appearance-none  relative block w-full mb-2 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-green-400  focus:border-green-400 focus:z-10 sm:text-sm"
                     placeholder="Correo Electronico"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
+                    {...register('email', {
+                      required: true,
+                      maxLength: 80,
+                    })}
                   />
                 </div>
                 <div>
@@ -75,15 +78,16 @@ const Register = () => {
                     Contraseña
                   </label>
                   <input
-                    id="password"
-                    name="password"
                     type="password"
                     autoComplete="current-password"
                     required
                     className="appearance-none  relative block w-full px-3 mb-2 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                     placeholder="Contraseña"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    {...register('password', {
+                      required: true,
+                      minLength: 6,
+                      maxLength: 80,
+                    })}
                   />
                 </div>
                 <div>
@@ -91,15 +95,15 @@ const Register = () => {
                     Nombre
                   </label>
                   <input
-                    id="nombre"
-                    name="nombre"
                     type="nombre"
                     autoComplete="current-nombre"
                     required
                     className="appearance-none  relative block w-full mb-2 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                     placeholder="Nombre Completo"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    {...register('nombre', {
+                      required: true,
+                      maxLength: 80,
+                    })}
                   />
                 </div>
                 <div>
@@ -107,9 +111,8 @@ const Register = () => {
                     Genero
                   </label>
                   <select
-                    id="genero"
-                    name="genero"
                     type="text"
+                    {...register('genero')}
                     autoComplete="current-genero"
                     required
                     className="appearance-none  relative block w-full mb-2 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -124,16 +127,15 @@ const Register = () => {
                     Documento
                   </label>
                   <select
-                    id="documento"
-                    name="documento"
                     type="text"
+                    {...register('documentos')}
                     autoComplete="current-documento"
                     required
                     className="appearance-none  relative block w-full mb-2 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                     placeholder="Documento"
                   >
-                    <option value="Hombre">DNI</option>
-                    <option value="Mujer">Carnet de Extrangeria</option>
+                    <option value="dni">DNI</option>
+                    <option value="ce">Carnet de Extrangeria</option>
                   </select>
                 </div>
                 <div>
@@ -141,19 +143,19 @@ const Register = () => {
                     Numero de Documento
                   </label>
                   <input
-                    id="numeroDocumento"
-                    name="numeroDocumento"
+                    {...register('nDocumento', {
+                      required: true,
+                      type: 'number',
+                      maxLength: 80,
+                    })}
                     type="numeroDocumento"
                     autoComplete="current-numeroDocumento"
                     required
                     className="appearance-none  relative block w-full mb-2 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                     placeholder="Numero de Documento"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
                   />
                 </div>
               </div>
-
               <div className="flex items-center justify-center">
                 <div className="flex items-center ">
                   <input

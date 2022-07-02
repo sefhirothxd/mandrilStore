@@ -59,6 +59,7 @@ export default function Example() {
     console.log('cerrando');
     try {
       await cart.googleLogout();
+      router.push('/');
     } catch (error) {
       console.log(error);
     }
