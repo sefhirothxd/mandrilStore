@@ -44,7 +44,6 @@ const StateWarapper = ({ children }) => {
 
   useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth, (user) => {
-      console.log(user);
       if (user) {
         const { email, photoURL, displayName, uid } = user;
         setIsLogin(true);

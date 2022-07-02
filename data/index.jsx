@@ -234,7 +234,7 @@ export const productos = [
     offer: false,
   },
   {
-    id: 27,
+    id: 28,
     title: 'Polo negro con estapado !que rico mi peru¡ 1',
     price: 40,
     image: '/img/Casaca1.png',
@@ -243,7 +243,7 @@ export const productos = [
     offer: false,
   },
   {
-    id: 27,
+    id: 29,
     title: 'Polo negro con estapado !que rico mi peru¡ 2',
     price: 40,
     image: '/img/Casaca2.png',
@@ -252,7 +252,7 @@ export const productos = [
     offer: false,
   },
   {
-    id: 27,
+    id: 30,
     title: 'Casaca con estampado cultura chicha 3',
     price: 80,
     image: '/img/Casaca3.png',
@@ -261,7 +261,7 @@ export const productos = [
     offer: false,
   },
   {
-    id: 27,
+    id: 31,
     title: 'Casaca con estampado cultura chicha 4',
     price: 80,
     image: '/img/Casaca4.png',

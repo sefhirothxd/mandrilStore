@@ -6,6 +6,7 @@ import {
   where,
   Timestamp,
   setDoc,
+  orderBy,
 } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
 import { auth, db } from '../firebase';
@@ -16,20 +17,20 @@ export const useFirestoreState = () => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState({});
 
-  console.log('soy auth', auth?.currentUser?.uid);
   const uid = auth?.currentUser?.uid;
 
   useEffect(() => {
     getOrders();
-    console.log('soy uid', uid);
   }, [uid]);
-
-  console.log(Timestamp.now());
 
   const getOrders = async () => {
     try {
       setLoading((prev) => ({ ...prev, getOrders: true }));
-      const q = query(collection(db, 'ordenes'), where('uid', '==', uid));
+      const q = query(
+        collection(db, 'ordenes'),
+        orderBy('fechaCreada', 'desc'),
+        where('uid', '==', uid)
+      );
       const querySnapshot = await getDocs(q);
       const datos = querySnapshot.docs.map((doc) => doc.data());
       setOrders(datos);

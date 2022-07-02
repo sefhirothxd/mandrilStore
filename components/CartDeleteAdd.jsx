@@ -1,15 +1,15 @@
 import React from 'react';
-import { useAppContext } from '../components/StateWarapper';
+import { useAppContext } from './StateWarapper';
 import style from '../styles/CartButton.module.css';
 
 const CartDelete = ({ item }) => {
   const cart = useAppContext();
   const handleClick = () => {
-    cart.deleteItemCart(item);
+    cart.addItemCart(item);
   };
   return (
     <button className={style.buttonDelete} onClick={handleClick}>
-      -
+      +
     </button>
   );
 };

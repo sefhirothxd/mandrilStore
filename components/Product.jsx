@@ -5,6 +5,7 @@ import style from '../styles/Product.module.css';
 import { convertToPath } from '../lib/utils';
 import CartButton from '../components/CartButton';
 import CartDeleteButton from '../components/CartDelete';
+import CartAddButton from '../components/CartDeleteAdd';
 import Icon from '../public/img/x.svg';
 const Product = ({ item, showAs, qty }) => {
   if (showAs === 'Page') {
@@ -63,9 +64,21 @@ const Product = ({ item, showAs, qty }) => {
             <h3>{item.title}</h3>
           </div>
           <div>Precio: S/.{item.price}</div>
-          {qty === 0 ? '' : <div>{qty} Unidades</div>}
+          {qty === 0 ? (
+            ''
+          ) : (
+            <div className="flex justify-center items-center w-full gap-5">
+              <CartDeleteButton item={item} />
+              <input
+                type="text"
+                value={qty}
+                className="text-black w-12 text-center"
+              />
+              <CartAddButton item={item} />
+            </div>
+          )}
           {qty === 0 ? '' : <div>SubTotal: S/.{qty * item.price}</div>}
-          <CartDeleteButton item={item} />
+          {/* <CartDeleteButton item={item} /> */}
         </div>
       </div>
     );
