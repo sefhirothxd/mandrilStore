@@ -127,7 +127,7 @@ export const productos = [
   },
   {
     id: 14,
-    title: 'Polo negro con estampado 10',
+    title: 'Polo azul con estampado 10',
     price: 40,
     image: '/img/Polo10.png',
     description:
@@ -136,7 +136,7 @@ export const productos = [
   },
   {
     id: 15,
-    title: 'Polo negro con estampado 11',
+    title: 'Polo azul con estampado 11',
     price: 40,
     image: '/img/Polo11.png',
     description:
@@ -271,7 +271,7 @@ export const productos = [
   },
   {
     id: 16,
-    title: 'Polo negro con estampado 12',
+    title: 'Polo azul con estampado 12',
     price: 40,
     image: '/img/Polo12.png',
     description:
