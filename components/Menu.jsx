@@ -37,7 +37,7 @@ const solutions = [
 ];
 const loginListUrl = [
   {
-    name: 'Perfil',
+    name: 'Mis pedidos',
     description: 'Pagina de inicio donde encontraras ofertas.',
     href: '/perfil',
     icon: ChartBarIcon,
