@@ -126,6 +126,7 @@ const Pay = () => {
                               placeholder="0000 0000 0000 0000"
                               type="text"
                               pattern="[0-9]+"
+                              minLength={16}
                               maxLength={16}
                               required
                             />
