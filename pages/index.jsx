@@ -1,20 +1,21 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import Layout from '../components/Layout';
 import Slider from '../components/Slider';
 import { getLatestItems, getOffer } from '../services/itemService';
 import Product from '../components/Product';
 import styleItems from '../styles/Product.module.css';
-import Head from 'next/head';
+import Script from 'next/script';
+
 export default function Home({ items, offer }) {
   return (
     <Layout title="Bienvenido">
-      <Head>
-        <title>Sobre nosotros - Mi sitio web</title>
-        <meta name="description" content="Descripción de la página de Sobre nosotros" />
-        <link rel="icon" href="/favicon.ico" />
-        <script src="https://account.snatchbot.me/script.js" async></script>
-        <script>window.sntchChat.Init(330004)</script>
-      </Head>
+      <Script
+        src="https://account.snatchbot.me/script.js"
+        onLoad={() => {
+          window.sntchChat.Init(330004);
+        }}
+        id="snatchbot-banner-script"
+      ></Script>
+
       <div>
         <div className="">
           <Slider />
