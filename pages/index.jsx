@@ -3,9 +3,17 @@ import Slider from '../components/Slider';
 import { getLatestItems, getOffer } from '../services/itemService';
 import Product from '../components/Product';
 import styleItems from '../styles/Product.module.css';
+import Head from 'next/head';
 export default function Home({ items, offer }) {
   return (
     <Layout title="Bienvenido">
+      <Head>
+        <title>Sobre nosotros - Mi sitio web</title>
+        <meta name="description" content="Descripción de la página de Sobre nosotros" />
+        <link rel="icon" href="/favicon.ico" />
+        <script src="https://account.snatchbot.me/script.js"></script>
+        <script>window.sntchChat.Init(330004)</script>
+      </Head>
       <div>
         <div className="">
           <Slider />
@@ -20,10 +28,7 @@ export default function Home({ items, offer }) {
           <div
             className={`grid overflow-hidden grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center xl:grid-cols-4 grid-rows-1 gap-5 grid-flow-row`}
           >
-            {items &&
-              items.map((item) => (
-                <Product key={item.id} item={item} showAs="probando" />
-              ))}
+            {items && items.map((item) => <Product key={item.id} item={item} showAs="probando" />)}
           </div>
         </div>
         <div>
@@ -36,10 +41,7 @@ export default function Home({ items, offer }) {
           <div
             className={`grid overflow-hidden grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center xl:grid-cols-4 grid-rows-1 gap-5 grid-flow-row`}
           >
-            {offer &&
-              offer.map((item) => (
-                <Product key={item.id} item={item} showAs="probando" />
-              ))}
+            {offer && offer.map((item) => <Product key={item.id} item={item} showAs="probando" />)}
           </div>
         </div>
       </div>
