@@ -15,6 +15,20 @@ export default function Home({ items, offer }) {
         }}
         id="snatchbot-banner-script"
       ></Script>
+      {/* <!-- Global site tag (gtag.js) - Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-F8B54VVVKG"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-F8B54VVVKG');
+        `}
+      </Script>
 
       <div>
         <div className="">
