@@ -83,26 +83,17 @@ export default function Example() {
           </div>
           <Popover.Group as="nav" className="hidden lg:flex lg:w-64 space-x-5">
             <Link href="/">
-              <a className="text-xl font-bold text-white hover:text-orange-500">
-                Inicio
-              </a>
+              <a className="text-xl font-bold text-white hover:text-orange-500">Inicio</a>
             </Link>
             <Link href="/store">
-              <a className="text-xl font-bold text-white hover:text-orange-500">
-                Productos
-              </a>
+              <a className="text-xl font-bold text-white hover:text-orange-500">Productos</a>
             </Link>
           </Popover.Group>
           <div className="flex justify-center lg:w-0 lg:flex-1">
             <Link href="/">
               <a>
                 <span className="sr-only">Workflow</span>
-                <Image
-                  width={234}
-                  height={80}
-                  src="/img/MandrilLogoFinal.png"
-                  alt="Workflow"
-                />
+                <Image width={160} height={100} src="/img/logo-mandrilo-bg.png" alt="Workflow" />
               </a>
             </Link>
           </div>
@@ -157,9 +148,7 @@ export default function Example() {
                                     aria-hidden="true"
                                   />
                                   <div className="ml-4">
-                                    <p className="text-base font-medium text-white">
-                                      {item.name}
-                                    </p>
+                                    <p className="text-base font-medium text-white">{item.name}</p>
                                   </div>
                                 </a>
                               </Link>
@@ -205,9 +194,7 @@ export default function Example() {
                 alt="icono carrito de compra"
               />
               {cart.getNumberItems() > 0 && (
-                <span className={style.numProduct}>
-                  {cart.getNumberItems()}
-                </span>
+                <span className={style.numProduct}>{cart.getNumberItems()}</span>
               )}
             </a>
           </div>
@@ -231,12 +218,7 @@ export default function Example() {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <Image
-                    width={234}
-                    height={80}
-                    src="/img/MandrilLogoFinal.png"
-                    alt="Workflow"
-                  />
+                  <Image width={160} height={100} src="/img/logo-mandrilo-bg.png" alt="Workflow" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-bgBlack border-gray-600 border rounded-md p-2 inline-flex items-center justify-center text-white focus:outline-none focus:ring-2 focus:ring-inset ring-gray-600">
@@ -254,9 +236,7 @@ export default function Example() {
                           className="flex-shrink-0 h-6 w-6 text-white"
                           aria-hidden="true"
                         />
-                        <span className="ml-3 text-base font-medium text-white">
-                          {item.name}
-                        </span>
+                        <span className="ml-3 text-base font-medium text-white">{item.name}</span>
                       </a>
                     </Link>
                   ))}
@@ -270,13 +250,9 @@ export default function Example() {
                       height={24}
                       alt="icono carrito de compra"
                     />
-                    <span className="ml-3 text-base font-medium text-white">
-                      Carrito de compra
-                    </span>
+                    <span className="ml-3 text-base font-medium text-white">Carrito de compra</span>
                     {cart.getNumberItems() > 0 && (
-                      <span className={style.movilNumProduct}>
-                        {cart.getNumberItems()}
-                      </span>
+                      <span className={style.movilNumProduct}>{cart.getNumberItems()}</span>
                     )}
                   </a>
                 </nav>
